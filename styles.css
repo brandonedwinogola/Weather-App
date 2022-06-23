@@ -20,10 +20,6 @@ body {
     margin: 1em;
 }
 
-h1.temp {
-    margin: 0;
-}
-
 .search {
     display: flex;
     align-items: center;
@@ -52,8 +48,13 @@ input.search-bar {
     color: antiquewhite;
     font-family: inherit;
     font-size: 120%;
+    width: calc(100% - 100px);
 }
 
 button:hover {
     background: #7c7c7c6b;
+}
+
+h1.temp {
+    margin: 0;
 }
