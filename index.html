@@ -5,33 +5,95 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css">
-    <script src="./script.js"></script>
+    <link rel="Stylesheet" href="style.css" <title>Weather App</title>
 </head>
 
 <body>
-    <div class="card">
-        <div class="search">
-            <input type="text" class="search-bar" placeholder="search">
-            <button><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em"
-                 width="2em" xmlns="http://www.w3.org/2000/svg">
-                 <path
-                  d="M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0 0 11.6 0l43.6-43.5a8.2 8.2 0 0 0 0-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z">
-            </path></svg></button>
+
+    <div class="container">
+        <div class="current-info">
+
+            <div class="date-container">
+                <div class="time" id="time">
+                    12:30 PM <span id="am-pm"></span>
+                </div>
+                <div class="date" id="date">
+                    Monday,24 May
+                </div>
+
+                <div class="others" id="current-weather-item">
+                    <div class="weather-items">
+                        <div>Humidity</div>
+                        <div> 92.5% </div>
+                    </div>
+                    <div class="weather-items">
+                        <div>Pressure</div>
+                        <div> 121 </div>
+                    </div>
+                    <div class="weather-items">
+                        <div>Wind speed</div>
+                        <div> 222 </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="place-container">
+                <div class="time-zone" id="time-zone">Nairobi (GMT+3)</div>
+                <div class="country" id="country">IN</div>
+            </div>
         </div>
-        <div class="weather">
-            <h2 class="Town">Weather in Nairobi</h2>
-            <h1 class="temperature">45°C</h1>
-            <img src="" alt="" class="icon" />
-            <div class="description">Rainy</div>
-            <div class="humidity">humidity: 80%</div>
-            <div class="wind">wind speed: 38.9 Km/h</div>
+
+        <div class="future-forecast">
+            <div class="today" id="current-temp">
+                <img src=" http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <div class="other">
+                    <div class="day">Monday</div>
+                    <div class="temp">Night - 25.6&#176; C</div>
+                    <div class="temp">Day - 35.6&#176; C</div>
+                </div>
+            </div>
+
+            <div class="weather-forecast" id="weather-forecast">
+                <div class="weather-forecast-item"></div>
+                <div class="day">Tue</div>
+                <img src=" http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <div class="temp">Night - 25.6&#176; C</div>
+                <div class="temp">Day - 35.6&#176; C</div>
+            </div>
+            <div class="weather-forecast-item"></div>
+            <div class="day">Wed</div>
+            <img src=" http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+            <div class="temp">Night - 25.6&#176; C</div>
+            <div class="temp">Day - 35.6&#176; C</div>
         </div>
+        <div class="weather-forecast-item"></div>
+        <div class="day">Thur</div>
+        <img src=" http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+        <div class="temp">Night - 25.6&#176; C</div>
+        <div class="temp">Day - 35.6&#176; C</div>
     </div>
+    <div class="weather-forecast-item"></div>
+    <div class="day">Fri</div>
+    <img src=" http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+    <div class="temp">Night - 25.6&#176; C</div>
+    <div class="temp">Day - 35.6&#176; C</div>
+    </div>
+    <div class="weather-forecast-item"></div>
+    <div class="day">Sat</div>
+    <img src=" http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+    <div class="temp">Night - 25.6&#176; C</div>
+    <div class="temp">Day - 35.6&#176; C</div>
+    </div>
+
+
+    </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js" integrity="sha512-x/vqovXY/Q4b+rNjgiheBsA/vbWA3IVvsS8lkQSX1gQ4ggSJx38oI2vREZXpTzhAv6tNUaX81E7QBBzkpDQayA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <script src="" <script src="script.js"></script>
 </body>
 
 </html>
